@@ -55,8 +55,8 @@ println(imageSmallerDimension, imageLargerDimension, widthLarger, heightLarger);
 //Computer chooses which formulae to execute:
 if(widthLarger == true) imageWidthRatio = imageLargerDimension / imageLargerDimension;
 if(widthLarger == true) imageHeightRatio = imageSmallerDimension / imageLargerDimension;
-if() ;
-if() ;
+if(heightLarger == true) imageWidthRatio = imageSmallerDimension / imageLargerDimension;
+if(heightLarger == true) imageHeightRatio = imageLargerDimension / imageLargerDimension;
 //Note:
 //Answers must be 1.0 and between 0 and 1 (decimal)
 //Ratio 1.0 similar to style="width:100%" (websites)

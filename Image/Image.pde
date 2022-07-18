@@ -31,6 +31,14 @@ size(750, 500); //Landscape
 
 //Population
 pic = loadImage("../Ayrton Senna The Best.jpg"); //Dimensions: width = 1791; height = 1396
+//Notes: Dimensions are found in the image file / Right Click / Properties / Details
+//Algorithm: Find the larger dimension for aspect ratio (comparison of two numbers)
+int picWidth = 1791;
+int picHeight = 1396;
+if () {
+} else{
+}; //End image dimension comparison
+
 picWidthAdjusted =;
 picHeightAdjusted =;
 imageX =width*0; //smallest width of the image is the width*0

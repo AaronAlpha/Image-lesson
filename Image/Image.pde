@@ -25,6 +25,7 @@
 float imageX, imageY, imageWidth, imageHeight, picWidthAdjusted, picHeightAdjusted;  
 float imageLargerDimension, imageSmallerDimension;
 PImage pic;
+Boolean widthLarger = false, heightLarger = false;
 
 
 //Canvas
@@ -40,20 +41,36 @@ if (picWidth >= picHeight) { //image dimension comparison
   //True if Landscape or square
   imageLargerDimension = picWidth;
   imageSmallerDimension = picHeight;
+  widthLarger = true;
 } else {
   //False if Portrait
   imageLargerDimension = picHeight;
   imageSmallerDimension = picWidth;  
-  
+  heightLarger = true;
 }; //End image dimension comparison
+println(imageSmallerDimension, imageLargerDimension, widthLarger, heightLarger);
 
-picWidthAdjusted =;
-picHeightAdjusted =;
+//Aspect Ratio
+//Note: single line IFs can be summarized into IF-ELSE or IF-ELseIF-ELSE
+//Computer chooses which formulae to execute:
+if(widthLarger == true) imageWidthRatio = imageLargerDimension / imageLargerDimension;
+if(widthLarger == true) imageHeightRatio = imageSmallerDimension / imageLargerDimension;
+if() ;
+if() ;
+//Note:
+//Answers must be 1.0 and between 0 and 1 (decimal)
+//Ratio 1.0 similar to style="width:100%" (websites)
+//Ratio of 0-1 similar to style="height:auto"
+
+//Note: 'println()' also verifies decimal places, compiler will truncate them
+
+//picWidthAdjusted =;
+//picHeightAdjusted =;
 imageX =width*0; //smallest width of the image is the width*0
 imageY = height*0; //smallest height of the image is the height*0
 imageWidth = width-1; //Canvas (0,0) means point doesnt match to rectangle, hence missing outline on two sides 
 imageHeight = height-1;
 
 rect(imageX, imageY, imageWidth, imageHeight); //Background Image 
-image(pic, imageX, imageY, picWidthAdjusted, picHeightAdjusted);
+//image(pic, imageX, imageY, picWidthAdjusted, picHeightAdjusted);
 //image();

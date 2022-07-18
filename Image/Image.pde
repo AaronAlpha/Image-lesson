@@ -1,19 +1,25 @@
-//Global Variables
+//Dynamic section
+////Global Variables
 
-void setup() {
+//void setup() {
   
-};
+//};
 
-void draw() {
+//void draw() {
   
-};
+//};
 
-void keyPressed() {
+//void keyPressed() {
   
-};
+//};
 
-void mousePressed() {
+//void mousePressed() {
   
-};
+//};
 
-//End MAIN program
+////End MAIN program
+
+
+
+//Static(section) to copy to dynamic
+size(750, 500); //Landscape

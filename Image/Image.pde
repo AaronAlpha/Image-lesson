@@ -23,6 +23,7 @@
 
 //Static(section) to copy to dynamic
 float imageX, imageY, imageWidth, imageHeight, picWidthAdjusted, picHeightAdjusted;  
+float imageLargerDimension, imageSmallerDimension;
 PImage pic;
 
 
@@ -35,8 +36,15 @@ pic = loadImage("../Ayrton Senna The Best.jpg"); //Dimensions: width = 1791; hei
 //Algorithm: Find the larger dimension for aspect ratio (comparison of two numbers)
 int picWidth = 1791;
 int picHeight = 1396;
-if () {
-} else{
+if (picWidth >= picHeight) { //image dimension comparison
+  //True if Landscape or square
+  imageLargerDimension = picWidth;
+  imageSmallerDimension = picHeight;
+} else {
+  //False if Portrait
+  imageLargerDimension = picHeight;
+  imageSmallerDimension = picWidth;  
+  
 }; //End image dimension comparison
 
 picWidthAdjusted =;

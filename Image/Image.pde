@@ -22,7 +22,7 @@
 
 
 //Static(section) to copy to dynamic
-float imageX, imageY, imageWidth, imageHeight, picWidthAdjusted, picHeightAdjusted;  
+float imageX, imageY, imageWidth, imageHeight, imageWidthRatio, imageHeightRatio, picWidthAdjusted, picHeightAdjusted;  
 float imageLargerDimension, imageSmallerDimension;
 PImage pic;
 Boolean widthLarger = false, heightLarger = false;
@@ -69,6 +69,8 @@ imageHeight = height-1;
 
 //Adjuested image variables for Aspect Ratio: (entire image will be smaller due to aspect ratio)
 float picWidthAdjusted, picHeightAdjusted; 
+picWidthAdjusted = float(width) * imageWidthRatio;
+picHeightAdjusted = float(height) * imageHeightRatio;
 
 
 //Note: 'println()' also verifies decimal places, compiler will truncate them

@@ -22,7 +22,7 @@
 
 
 //Static(section) to copy to dynamic
-float imageX, imageY, imageWidth, imageHeight, imageWidthRatio, imageHeightRatio, picWidthAdjusted, picHeightAdjusted;  
+float imageX, imageY, imageWidth, imageHeight, imageWidthRatio = 0.0, imageHeightRatio = 0.0, picWidthAdjusted, picHeightAdjusted;  
 float imageLargerDimension, imageSmallerDimension;
 PImage pic;
 Boolean widthLarger = false, heightLarger = false;
@@ -68,7 +68,6 @@ imageWidth = width-1; //Canvas (0,0) means point doesnt match to rectangle, henc
 imageHeight = height-1;
 
 //Adjuested image variables for Aspect Ratio: (entire image will be smaller due to aspect ratio)
-float picWidthAdjusted, picHeightAdjusted; 
 picWidthAdjusted = float(width) * imageWidthRatio;
 picHeightAdjusted = float(height) * imageHeightRatio;
 

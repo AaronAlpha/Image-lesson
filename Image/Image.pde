@@ -58,18 +58,24 @@ if(widthLarger == true) imageHeightRatio = imageSmallerDimension / imageLargerDi
 if(heightLarger == true) imageWidthRatio = imageSmallerDimension / imageLargerDimension;
 if(heightLarger == true) imageHeightRatio = imageLargerDimension / imageLargerDimension;
 //Note:
-//Answers must be 1.0 and between 0 and 1 (decimal)
-//Ratio 1.0 similar to style="width:100%" (websites)
+//Answers must be 1.0 and between 0 and 1 (decimal) -> as in '1:n' ratio, where the 'imageLargerDimension' will be = 1
+//Ratio 1.0 similar to style="width:100%" (websites) -> as in  '1:n' ratio, where the 'imageSmallerDimension' will be = n(value between 0-1)
 //Ratio of 0-1 similar to style="height:auto"
+
+imageX =width*0; //smallest width of the image is the width*0
+imageY = height*0; //smallest height of the image is the height*0
+imageWidth = width-1; //Canvas (0,0) means point doesnt match to rectangle, hence missing outline on two sides 
+imageHeight = height-1;
+
+//Adjuested image variables for Aspect Ratio: (entire image will be smaller due to aspect ratio)
+float picWidthAdjusted, picHeightAdjusted; 
+
 
 //Note: 'println()' also verifies decimal places, compiler will truncate them
 
 //picWidthAdjusted =;
 //picHeightAdjusted =;
-imageX =width*0; //smallest width of the image is the width*0
-imageY = height*0; //smallest height of the image is the height*0
-imageWidth = width-1; //Canvas (0,0) means point doesnt match to rectangle, hence missing outline on two sides 
-imageHeight = height-1;
+
 
 rect(imageX, imageY, imageWidth, imageHeight); //Background Image 
 //image(pic, imageX, imageY, picWidthAdjusted, picHeightAdjusted);

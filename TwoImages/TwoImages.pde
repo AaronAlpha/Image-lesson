@@ -1,13 +1,13 @@
 //Dynamic section
 //Global Variables
-float imageX1, imageY1, imageWidth1, imageHeight1, imageLargerDimension1, imageSmallerDimension1;
-float imageX2, imageY2, imageWidth2, imageHeight2, imageLargerDimension2, imageSmallerDimension2;
+float imageX1, imageY1, imageWidth1, imageHeight1, imageLargerDimension1, imageSmallerDimension1, imageWidthRatio1 = 0.0, imageHeightRatio1 = 0.0; //picWidthAdjusted, picHeightAdjusted;
+float imageX2, imageY2, imageWidth2, imageHeight2, imageLargerDimension2, imageSmallerDimension2, imageWidthRatio2 = 0.0, imageHeightRatio2 = 0.0; //picWidthAdjusted, picHeightAdjusted;
 Boolean widthLarger1 = false, heightLarger1 = false;
 Boolean widthLarger2 = false, heightLarger2 = false;
 
 
 
-//imageWidthRatio = 0.0, imageHeightRatio = 0.0, picWidthAdjusted, picHeightAdjusted;  
+//  
 PImage pic1, pic2;
 
 
@@ -41,6 +41,16 @@ void setup() {
   }; //End image dimension comparison
   println(imageSmallerDimension1, imageLargerDimension1, widthLarger1, heightLarger1);
   
+  //Aspect Ratio
+  //Note: single line IFs can be summarized into IF-ELSE or IF-ELseIF-ELSE
+  //Computer chooses which formulae to execute:
+  if(widthLarger1 == true) imageWidthRatio1 = imageLargerDimension1 / imageLargerDimension1;
+  if(widthLarger1 == true) imageHeightRatio1 = imageSmallerDimension1 / imageLargerDimension1;
+  if(heightLarger1 == true) imageWidthRatio1 = imageSmallerDimension1 / imageLargerDimension1;
+  if(heightLarger1 == true) imageHeightRatio1 = imageLargerDimension1 / imageLargerDimension1;
+  
+  
+  
   
   if (picWidth2 >= picHeight2) { //image dimension comparison
   //True if Landscape or square
@@ -55,19 +65,17 @@ void setup() {
   }; //End image dimension comparison
   println(imageSmallerDimension1, imageLargerDimension1, widthLarger2, heightLarger2);
   
-  
-  
-  //Aspect Ratio
-  //Note: single line IFs can be summarized into IF-ELSE or IF-ELseIF-ELSE
-  //Computer chooses which formulae to execute:
-  if(widthLarger == true) imageWidthRatio = imageLargerDimension / imageLargerDimension;
-  if(widthLarger == true) imageHeightRatio = imageSmallerDimension / imageLargerDimension;
-  if(heightLarger == true) imageWidthRatio = imageSmallerDimension / imageLargerDimension;
-  if(heightLarger == true) imageHeightRatio = imageLargerDimension / imageLargerDimension;
+  if(widthLarger2 == true) imageWidthRatio2 = imageLargerDimension2 / imageLargerDimension2;
+  if(widthLarger2 == true) imageHeightRatio2 = imageSmallerDimension2 / imageLargerDimension2;
+  if(heightLarger2 == true) imageWidthRatio2 = imageSmallerDimension2 / imageLargerDimension2;
+  if(heightLarger2 == true) imageHeightRatio2 = imageLargerDimension2 / imageLargerDimension2;
   //Note:
   //Answers must be 1.0 and between 0 and 1 (decimal) -> as in '1:n' ratio, where the 'imageLargerDimension' will be = 1
   //Ratio 1.0 similar to style="width:100%" (websites) -> as in  '1:n' ratio, where the 'imageSmallerDimension' will be = n(value between 0-1)
   //Ratio of 0-1 similar to style="height:auto" 
+  
+  
+  
   
   //Population of Rect()  
   imageX1 =width*0; //smallest width of the image is the width*0

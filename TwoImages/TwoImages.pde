@@ -78,14 +78,14 @@ void setup() {
   
   
   //Population of Rect()  
-  imageX1 =width*0; //smallest width of the image is the width*0
+  imageX1 =width*1/4; //smallest width of the image is the width*0
   imageY1 = height*0; //smallest height of the image is the height*0
-  imageWidth1 = width-1; //Canvas (0,0) means point doesnt match to rectangle, hence missing outline on two sides 
+  imageWidth1 = (width-1)*1/2; //Canvas (0,0) means point doesnt match to rectangle, hence missing outline on two sides 
   imageHeight1 = (height-1)*1/2;
   
-  imageX2 =width*0; //smallest width of the image is the width*0
+  imageX2 =width*1/4; //smallest width of the image is the width*0
   imageY2 = height*1/2; //smallest height of the image is the height*0
-  imageWidth2 = width; //Canvas (0,0) means point doesnt match to rectangle, hence missing outline on two sides 
+  imageWidth2 = (width-1)*1/2; //Canvas (0,0) means point doesnt match to rectangle, hence missing outline on two sides 
   imageHeight2 = (height-1)*1/2;
   
   //Adjuested image variables for Aspect Ratio: (entire image will be smaller due to aspect ratio)

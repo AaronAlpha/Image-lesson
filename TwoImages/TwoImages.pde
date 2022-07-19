@@ -59,11 +59,11 @@ void setup() {
   widthLarger2 = true;
   } else {
   //False if Portrait
-  imageLargerDimension1 = picHeight1;
-  imageSmallerDimension1 = picWidth1;  
+  imageLargerDimension2 = picHeight2;
+  imageSmallerDimension2 = picWidth2;  
   heightLarger2 = true;
   }; //End image dimension comparison
-  println(imageSmallerDimension1, imageLargerDimension1, widthLarger2, heightLarger2);
+  println(imageSmallerDimension2, imageLargerDimension2, widthLarger2, heightLarger2);
   
   if(widthLarger2 == true) imageWidthRatio2 = imageLargerDimension2 / imageLargerDimension2;
   if(widthLarger2 == true) imageHeightRatio2 = imageSmallerDimension2 / imageLargerDimension2;

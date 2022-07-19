@@ -79,5 +79,5 @@ picHeightAdjusted = float(height) * imageHeightRatio;
 
 
 rect(imageX, imageY, imageWidth, imageHeight); //Background Image 
-//image(pic, imageX, imageY, picWidthAdjusted, picHeightAdjusted);
+image(pic, imageX, imageY, picWidthAdjusted, picHeightAdjusted);
 //image();

@@ -73,11 +73,7 @@ picHeightAdjusted = float(height) * imageHeightRatio;
 
 
 //Note: 'println()' also verifies decimal places, compiler will truncate them
-
-//picWidthAdjusted =;
-//picHeightAdjusted =;
-
+println(imageX, imageY, picWidthAdjusted, picHeightAdjusted);
 
 rect(imageX, imageY, imageWidth, imageHeight); //Background Image 
 image(pic, imageX, imageY, picWidthAdjusted, picHeightAdjusted);
-//image();

@@ -1,7 +1,7 @@
 //Dynamic section
 //Global Variables
-float imageX1, imageY1, imageWidth1, imageHeight1, imageLargerDimension1, imageSmallerDimension1, imageWidthRatio1 = 0.0, imageHeightRatio1 = 0.0; //picWidthAdjusted, picHeightAdjusted;
-float imageX2, imageY2, imageWidth2, imageHeight2, imageLargerDimension2, imageSmallerDimension2, imageWidthRatio2 = 0.0, imageHeightRatio2 = 0.0; //picWidthAdjusted, picHeightAdjusted;
+float imageX1, imageY1, imageWidth1, imageHeight1, imageLargerDimension1, imageSmallerDimension1, imageWidthRatio1 = 0.0, imageHeightRatio1 = 0.0, picWidthAdjusted1, picHeightAdjusted1;
+float imageX2, imageY2, imageWidth2, imageHeight2, imageLargerDimension2, imageSmallerDimension2, imageWidthRatio2 = 0.0, imageHeightRatio2 = 0.0, picWidthAdjusted2, picHeightAdjusted2;
 Boolean widthLarger1 = false, heightLarger1 = false;
 Boolean widthLarger2 = false, heightLarger2 = false;
 
@@ -89,13 +89,19 @@ void setup() {
   imageHeight2 = (height-1)*1/2;
   
   //Adjuested image variables for Aspect Ratio: (entire image will be smaller due to aspect ratio)
-  picWidthAdjusted = imageWidth * imageWidthRatio;
-  picHeightAdjusted = imageHeight * imageHeightRatio;
-  
+  picWidthAdjusted1 = imageWidth1 * imageWidthRatio1;
+  picHeightAdjusted1 = imageHeight1 * imageHeightRatio1;
   
   //Note: 'println()' also verifies decimal places, compiler will truncate them
-  println(imageX, imageY, picWidthAdjusted, picHeightAdjusted);
+  println(imageX1, imageY1, picWidthAdjusted1, picHeightAdjusted1);
 
+
+  //Adjuested image variables for Aspect Ratio: (entire image will be smaller due to aspect ratio)
+  picWidthAdjusted2 = imageWidth2 * imageWidthRatio2;
+  picHeightAdjusted2 = imageHeight2 * imageHeightRatio2;
+  
+  //Note: 'println()' also verifies decimal places, compiler will truncate them
+  println(imageX2, imageY2, picWidthAdjusted2, picHeightAdjusted2);
 
 
 };
@@ -105,7 +111,8 @@ void draw() {
   rect(imageX1, imageY1, imageWidth1, imageHeight1); //Background Image 
   rect(imageX2, imageY2, imageWidth2, imageHeight2)
   //image(pic, imageX, imageY, imageWidth, imageHeight); //original picture/image in background 'rectangle' of canvas
-  image(pic, imageX, imageY, picWidthAdjusted, picHeightAdjusted); //adjusted picture/image in background 'rectangle' of canvas, manipulated by a created aspect ratio  
+  image(pic1, imageX1, imageY1, picWidthAdjusted1, picHeightAdjusted1); //adjusted picture/image in background 'rectangle' of canvas, manipulated by a created aspect ratio  
+  image(pic2, imageX2, imageY2, picWidthAdjusted2, picHeightAdjusted2); //adjusted picture/image in background 'rectangle' of canvas, manipulated by a created aspect ratio  
   
   
 };

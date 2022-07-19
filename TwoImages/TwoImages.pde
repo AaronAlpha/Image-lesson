@@ -1,16 +1,17 @@
 //Dynamic section
 //Global Variables
-float imageX, imageY, imageWidth, imageHeight, imageWidthRatio = 0.0, imageHeightRatio = 0.0, picWidthAdjusted, picHeightAdjusted;  
-float imageLargerDimension, imageSmallerDimension;
-PImage pic;
-Boolean widthLarger = false, heightLarger = false;
+//float imageX, imageY, imageWidth, imageHeight, imageWidthRatio = 0.0, imageHeightRatio = 0.0, picWidthAdjusted, picHeightAdjusted;  
+//float imageLargerDimension, imageSmallerDimension;
+PImage pic1, pic2;
+//Boolean widthLarger = false, heightLarger = false;
 
 
 void setup() {
   size(750, 500); //Landscape
   
   //Population of image
-  pic = loadImage("../Ayrton Senna The Best.jpg"); //Dimensions: width = 1791; height = 1396
+  pic1 = loadImage("../Ayrton Senna The Best.jpg"); //Dimensions: width = 1791; height = 1396
+  pic2 = loadImage("../Randy Johnson.jpg"); //Dimensions: width = 595; height = 743
   //Notes: Dimensions are found in the image file / Right Click / Properties / Details
   //Algorithm: Find the larger dimension for aspect ratio (comparison of two numbers)
   int picWidth = 1791;
@@ -60,7 +61,7 @@ void setup() {
 
 void draw() {
   
-  //rect(imageX, imageY, imageWidth, imageHeight); //Background Image 
+  rect(imageX, imageY, imageWidth, imageHeight); //Background Image 
   //image(pic, imageX, imageY, imageWidth, imageHeight); //original picture/image in background 'rectangle' of canvas
   image(pic, imageX, imageY, picWidthAdjusted, picHeightAdjusted); //adjusted picture/image in background 'rectangle' of canvas, manipulated by a created aspect ratio  
   

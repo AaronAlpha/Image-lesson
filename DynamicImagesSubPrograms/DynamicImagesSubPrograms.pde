@@ -11,6 +11,7 @@ void setup() {
   populatingVariables(); //this one line links to all the code in the tab 'PopulatingVariables' and runs it ONLY once
   
   imageDraw();//this line again links to all code in tab 'ImageDraw' and runs it ONLY once
+  //the above is in setup and now its in  'mousePressed()' as well
 };//End Setup
 
 
@@ -36,6 +37,7 @@ void keyPressed() {//is an event listener that performs operations when keys fro
 
 void mousePressed() {
   
+  imageDraw();//this line again links to all code in tab 'ImageDraw' and runs it ONLY once
   
   
   

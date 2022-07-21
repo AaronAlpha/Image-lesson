@@ -41,10 +41,10 @@ void setup() {
   //Ratio of 0-1 similar to style="height:auto" 
   
   //Population of Rect()  
-  imageX =width*0; //smallest width of the image is the width*0
-  imageY = height*0; //smallest height of the image is the height*0
-  imageWidth = width-1; //Canvas (0,0) means point doesnt match to rectangle, hence missing outline on two sides 
-  imageHeight = height-1;
+  imageX =width/2 - (width/2)/2; //smallest width of the image is the width*0
+  imageY = height/2; //smallest height of the image is the height*0
+  imageWidth = height; //Canvas (0,0) means point doesnt match to rectangle, hence missing outline on two sides 
+  imageHeight = height;
   
   //Adjuested image variables for Aspect Ratio: (entire image will be smaller due to aspect ratio)
   picWidthAdjusted = imageWidth * imageWidthRatio;

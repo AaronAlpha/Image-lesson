@@ -29,7 +29,7 @@ void setup() {
   println(imageSmallerDimension, imageLargerDimension, widthLarger, heightLarger);
   
   //Aspect Ratio
-  //Note: single line IFs can be summarized into IF-ELSE or IF-ELseIF-ELSE
+  //Note: single line IFs can be summarized into IF-ELSE or IF-ELSE IF-ELSE
   //Computer chooses which formulae to execute:
   if(widthLarger == true) imageWidthRatio = imageLargerDimension / imageLargerDimension;
   if(widthLarger == true) imageHeightRatio = imageSmallerDimension / imageLargerDimension;
